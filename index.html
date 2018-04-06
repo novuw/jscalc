@@ -4,6 +4,143 @@
 <link href="styles.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!--modal code-->
+<script>
+$(document).ready(function(){
+//variables
+var runningTotal = 0;
+var display = $('#display');
+var ac = $('#AC');
+var ce = $('#CE');
+var div = $('#DIV');
+var mul = $('#MUL');
+var seven = $('#7');
+var eight = $('#8');
+var nine = $('#9');
+var sub = $('#SUB');
+var four = $('#4');
+var five = $('#5');
+var six = $('#6');
+var add = $('#ADD');
+var one = $('#1');
+var two = $('#2');
+var three = $('#3');
+var zero = $('#0');
+var per= $('#PER');
+var equals = $('#EQUALS');
+//Function declarations
+function Add(){
+
+}
+function Sub(){
+
+}
+function Mul(){
+
+}
+function Div(){
+
+}
+function Equals(){
+
+}
+function cancelEntry(){
+
+}
+function clearAll(){
+
+}
+function Zero(){
+
+}
+function One(){
+
+}
+function Two(){
+
+}
+function Three(){
+
+}
+function Four(){
+
+}
+function Five(){
+
+}
+function Six(){
+
+}
+function Seven(){
+
+}
+function Eight(){
+
+}
+function Nine(){
+
+}
+function Period(){
+
+}
+ac.on('click', function(){
+    display.html('');
+    runningTotal = 0;
+    return runningTotal;
+    });
+ce.on('click', function(){
+
+    });
+div.on('click', function(){
+
+    });
+mul.on('click', function(){
+
+    });
+seven.on('click', function(){
+
+    });
+eight.on('click', function(){
+
+    });
+nine.on('click', function(){
+
+    });
+sub.on('click', function(){
+
+    });
+four.on('click', function(){
+
+    });
+five.on('click', function(){
+
+    });
+six.on('click', function(){
+
+    });
+add.on('click', function(){
+
+    });
+one.on('click', function(){
+
+    });
+two.on('click', function(){
+
+    });
+three.on('click', function(){
+
+    });
+zero.on('click', function(){
+
+    });
+per.on('click', function(){
+
+    });
+equals.on('click', function(){
+    display.html(runningTotal);
+    });
+
+});
+</script>
 <head>
     <meta charset= "UTF-8">
     <title>Javascript Calculator</title>
@@ -14,43 +151,43 @@
 <div class="container-fluid" style="background-color: #003399; width: 250px; height: 400px; position: relative; top: 100px; box-shadow: 0px 0px 10px 0px #000000; border-radius: 20px;">
         <h9 style="color: white; position: relative; top: 10px; text-shadow: 2px 2px #000000;"><center><i>Ti-Nspire</i></center></h9>
     <div class="container-fluid" style="background-color: #88cc00; width: 200px; height: 50px; position: relative; top: 20px; box-shadow: 0px 0px 10px 0px #000000; border-radius: 5px;">
-        <h1 id="display"></h1>
+        <h1 id="display">Welcome!</h1>
     </div>
     <div id="row1" style="position: relative; top: 40px;">
         <center>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">AC</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">CE</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">%</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">X</button>
+        <button id="AC" class="btn btn-primary" style="width: 40px; height: 40px;">AC</button>
+        <button id="CE" class="btn btn-primary" style="width: 40px; height: 40px;">CE</button>
+        <button id="DIV" class="btn btn-primary" style="width: 40px; height: 40px;">%</button>
+        <button id="MUL" class="btn btn-primary" style="width: 40px; height: 40px;">X</button>
         </center>
     </div>
     <div id="row2" style="position: relative; top: 50px;">
         <center>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">7</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">8</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">9</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">-</button>
+        <button id="7" class="btn btn-primary" style="width: 40px; height: 40px;">7</button>
+        <button id="8" class="btn btn-primary" style="width: 40px; height: 40px;">8</button>
+        <button id="9" class="btn btn-primary" style="width: 40px; height: 40px;">9</button>
+        <button id="SUB" class="btn btn-primary" style="width: 40px; height: 40px;">-</button>
         </center>
     </div>
     <div id="row3" style="position: relative; top: 60px;">
         <center>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">4</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">5</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">6</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">+</button>
+        <button id="4" class="btn btn-primary" style="width: 40px; height: 40px;">4</button>
+        <button id="5" class="btn btn-primary" style="width: 40px; height: 40px;">5</button>
+        <button id="6" class="btn btn-primary" style="width: 40px; height: 40px;">6</button>
+        <button id="ADD" class="btn btn-primary" style="width: 40px; height: 40px;">+</button>
         </center>
     </div>
     <div id="row4" style="position: relative; top: 70px; left: 25px;">
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">1</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">2</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">3</button>
+        <button id="1" class="btn btn-primary" style="width: 40px; height: 40px;">1</button>
+        <button id="2" class="btn btn-primary" style="width: 40px; height: 40px;">2</button>
+        <button id="3" class="btn btn-primary" style="width: 40px; height: 40px;">3</button>
     </div>
     <div id="row5" style="position: relative; top: 80px; left: 25px;">
-        <button id="" class="btn btn-primary" style="width: 84px; height: 40px;">0</button>
-        <button id="" class="btn btn-primary" style="width: 40px; height: 40px;">.</button>
+        <button id="0" class="btn btn-primary" style="width: 84px; height: 40px;">0</button>
+        <button id="PER" class="btn btn-primary" style="width: 40px; height: 40px;">.</button>
     </div>
     <div id="=" style="position: relative; left: 156px; top: -10px;">
-        <button id="" class="btn btn-primary" style="width: 40px; height: 90px;">=</button>
+        <button id="EQUALS" class="btn btn-primary" style="width: 40px; height: 90px;">=</button>
     </div>
 </div>
 </body>
