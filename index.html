@@ -7,6 +7,7 @@
 <script>
 $(document).ready(function(){
 //variables
+var dispRunningTotal = "";
 var runningTotal = 0;
 var display = $('#display');
 var ac = $('#AC');
@@ -97,39 +98,49 @@ mul.on('click', function(){
 
     });
 seven.on('click', function(){
-
+    display.html('7');
+    runningTotal = 0;
+    return runningTotal;
     });
 eight.on('click', function(){
+    display.html('8');
 
     });
 nine.on('click', function(){
+    display.html('9');
 
     });
 sub.on('click', function(){
 
     });
 four.on('click', function(){
+    display.html('4');
 
     });
 five.on('click', function(){
+    display.html('5');
 
     });
 six.on('click', function(){
+    display.html('6');
 
     });
 add.on('click', function(){
 
     });
 one.on('click', function(){
+    display.html('1');
 
     });
 two.on('click', function(){
-
+    display.html('2');
     });
 three.on('click', function(){
+    display.html('3');
 
     });
 zero.on('click', function(){
+    display.html('0');
 
     });
 per.on('click', function(){
