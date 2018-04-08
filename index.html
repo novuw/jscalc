@@ -7,8 +7,9 @@
 <script>
 $(document).ready(function(){
 //variables
-var dispRunningTotal = "";
-var runningTotal = 0;
+var numStorage = ['','',''];
+var runningTotal = [0];
+var finalOutput = [];
 var display = $('#display');
 var ac = $('#AC');
 var ce = $('#CE');
@@ -28,6 +29,7 @@ var three = $('#3');
 var zero = $('#0');
 var per= $('#PER');
 var equals = $('#EQUALS');
+
 //Function declarations
 function Add(){
 
@@ -42,112 +44,103 @@ function Div(){
 
 }
 function Equals(){
-
+    display.html(finalOutput[0]);
 }
 function cancelEntry(){
 
 }
 function clearAll(){
-
+    display.html('');
+    runningTotal = [0];
+    display.html(finalOutput[0]);
+    return runningTotal;
 }
 function Zero(){
-
+    numStorage.push(0);
 }
 function One(){
-
+    numStorage.push(1);
 }
 function Two(){
-
+    numStorage.push(2);
 }
 function Three(){
-
+    numStorage.push(3);
 }
 function Four(){
-
+    numStorage.push(4);
 }
 function Five(){
-
+    numStorage.push(5);
 }
 function Six(){
-
+    numStorage.push(6);
 }
 function Seven(){
-
+    numStorage.push(7);
 }
 function Eight(){
-
+    numStorage.push(8);
 }
 function Nine(){
-
+    numStorage.push(9);
 }
 function Period(){
 
 }
 ac.on('click', function(){
-    display.html('');
-    runningTotal = 0;
-    return runningTotal;
+    clearAll();
     });
 ce.on('click', function(){
-
+    cancelEntry();
     });
 div.on('click', function(){
-
+    Div();
     });
 mul.on('click', function(){
-
+    Mul();
     });
 seven.on('click', function(){
-    display.html('7');
-    runningTotal = 0;
-    return runningTotal;
+    Seven();
     });
 eight.on('click', function(){
-    display.html('8');
-
+    Eight();
     });
 nine.on('click', function(){
-    display.html('9');
-
+    Nine();
     });
 sub.on('click', function(){
-
+    Sub();
     });
 four.on('click', function(){
-    display.html('4');
-
+    Four();
     });
 five.on('click', function(){
-    display.html('5');
-
+    Five();
     });
 six.on('click', function(){
-    display.html('6');
-
+    Six();
     });
 add.on('click', function(){
-
+    Add();
     });
 one.on('click', function(){
-    display.html('1');
-
+    One();
     });
 two.on('click', function(){
-    display.html('2');
+    Two();
     });
 three.on('click', function(){
-    display.html('3');
-
+    Three();
     });
 zero.on('click', function(){
-    display.html('0');
-
+    Zero();
     });
 per.on('click', function(){
-
+    Period();
     });
 equals.on('click', function(){
-    display.html(runningTotal);
+    Equals();
     });
 
 });
