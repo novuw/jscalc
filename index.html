@@ -7,9 +7,10 @@
 <script>
 $(document).ready(function(){
 //variables
-var numStorage = ['','',''];
-var runningTotal = [0];
-var finalOutput = [];
+var $1;
+var $2;
+var output;
+var operations = [];
 var display = $('#display');
 var ac = $('#AC');
 var ce = $('#CE');
@@ -32,58 +33,99 @@ var equals = $('#EQUALS');
 
 //Function declarations
 function Add(){
-
+    $1 = parseInt(display.text());
+    display.html("");
+    operations.unshift(1);
+    return $1, operations;
 }
 function Sub(){
-
+    $1 = parseInt(display.text());
+    display.html("");
+    operations.unshift(2);
+    return $1, operations;
 }
 function Mul(){
-
+    $1 = parseInt(display.text());
+    display.html("");
+    operations.unshift(3);
+    return $1, operations;
 }
 function Div(){
-
+    $1 = parseInt(display.text());
+    display.html("");
+    operations.unshift(4);
+    return $1, operations;
 }
 function Equals(){
-    display.html(finalOutput[0]);
+    $2 = parseInt(display.text());
+    if (operations[0] == 1){
+        output = $1 + $2;
+    } else if (operations[0] == 2){
+        output = $1 - $2;
+    } else if (operations[0] == 3){
+        output = $1 * $2;
+    } else if (operations[0] == 4){
+        output = $1 / $2;
+    } else{
+        alert('You gotta enter numbers for the operation to work!');
+    }
+    display.html(output);
 }
 function cancelEntry(){
-
+    if ($2 !== undefined){
+        $2;
+        display.html("");
+    } else if ($1 !== undefined){
+        $1;
+        display.html("");
+    } else {
+        alert("Can't clear!");
+    }
 }
 function clearAll(){
     display.html('');
-    runningTotal = [0];
-    display.html(finalOutput[0]);
-    return runningTotal;
+    $2;
+    $1;
+    return $1, $2;
 }
 function Zero(){
-    numStorage.push(0);
+    display.append(0);
 }
 function One(){
-    numStorage.push(1);
+    display.append(1);
+
 }
 function Two(){
-    numStorage.push(2);
+    display.append(2);
+
 }
 function Three(){
-    numStorage.push(3);
+    display.append(3);
+
 }
 function Four(){
-    numStorage.push(4);
+    display.append(4);
+
 }
 function Five(){
-    numStorage.push(5);
+    display.append(5);
+
 }
 function Six(){
-    numStorage.push(6);
+    display.append(6);
+
 }
 function Seven(){
-    numStorage.push(7);
+    display.append(7);
+
 }
 function Eight(){
-    numStorage.push(8);
+    display.append(8);
+
 }
 function Nine(){
-    numStorage.push(9);
+    display.append(9);
+
 }
 function Period(){
 
@@ -155,7 +197,7 @@ equals.on('click', function(){
 <div class="container-fluid" style="background-color: #003399; width: 250px; height: 400px; position: relative; top: 100px; box-shadow: 0px 0px 10px 0px #000000; border-radius: 20px;">
         <h9 style="color: white; position: relative; top: 10px; text-shadow: 2px 2px #000000;"><center><i>Ti-Nspire</i></center></h9>
     <div class="container-fluid" style="background-color: #88cc00; width: 200px; height: 50px; position: relative; top: 20px; box-shadow: 0px 0px 10px 0px #000000; border-radius: 5px;">
-        <h1 id="display">Welcome!</h1>
+        <h1 id="display"></h1>
     </div>
     <div id="row1" style="position: relative; top: 40px;">
         <center>
