@@ -6,6 +6,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!--modal code-->
 <script>
 $(document).ready(function(){
+    $(function() {
+        $("#custom-modal").modal('show');
+    });
+    $('#go').on('click', function(){
+        $("#custom-modal").modal('hide');
+    });
 //variables
 var $1;
 var $2;
@@ -194,6 +200,16 @@ equals.on('click', function(){
 </head>
 <html>
 <body style="background-color:  #ffffcc">
+    <div id='custom-modal' class="modal fade" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #2db300"> <!-- #d9d9d9 #cccccc -->
+                        <h4 class="modal-title" style="color: white; text-align: center;">Welcome to JS Calculator!</h4>
+                        <br><center><button  id="go" class="btn btn-default" data-dismiss="modal">Go!</button></center>
+                    </div>
+                    </div>
+                </div>
+            </div>
 <div class="container-fluid" style="background-color: #003399; width: 250px; height: 400px; position: relative; top: 100px; box-shadow: 0px 0px 10px 0px #000000; border-radius: 20px;">
         <h9 style="color: white; position: relative; top: 10px; text-shadow: 2px 2px #000000;"><center><i>Ti-Nspire</i></center></h9>
     <div class="container-fluid" style="background-color: #88cc00; width: 200px; height: 50px; position: relative; top: 20px; box-shadow: 0px 0px 10px 0px #000000; border-radius: 5px;">
